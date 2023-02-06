@@ -16,23 +16,24 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Twitch Clone',
       theme: ThemeData.light().copyWith(
-          scaffoldBackgroundColor: backgroundColor,
-          appBarTheme: AppBarTheme.of(context).copyWith(
-              backgroundColor: backgroundColor,
-              elevation: 0,
-              titleTextStyle: const TextStyle(
-                color: primaryColor,
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-              )),
-          iconTheme: const IconThemeData(
-            color: primaryColor,
-          ),),
-          routes: {
-            OnBoardingScreen.routeName: (context) =>const OnBoardingScreen(),
-            LoginScreen.routeName:(context) => const LoginScreen(),
-            SignUpScreen.routeName:(context) => const SignUpScreen(),
-          },
+        scaffoldBackgroundColor: backgroundColor,
+        appBarTheme: AppBarTheme.of(context).copyWith(
+            backgroundColor: backgroundColor,
+            elevation: 0,
+            titleTextStyle: const TextStyle(
+              color: primaryColor,
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+            )),
+        iconTheme: const IconThemeData(
+          color: Colors.black,
+        ),
+      ),
+      routes: {
+        OnBoardingScreen.routeName: (context) => const OnBoardingScreen(),
+        LoginScreen.routeName: (context) => const LoginScreen(),
+        SignUpScreen.routeName: (context) => const SignUpScreen(),
+      },
       home: const OnBoardingScreen(),
     );
   }
